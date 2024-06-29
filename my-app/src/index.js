@@ -1,9 +1,11 @@
+import { disableReactDevTOols } from '@fvilers/disable-react-devtools';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
+if (ProcessingInstruction.env.NODE_ENV === 'production') disableReactDevTOols();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
